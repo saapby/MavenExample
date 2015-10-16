@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 public class SimpleTest {
 
 
-
     @Test (dataProvider = "primalNumber", dataProviderClass = DataProviders.class, groups = "DDT")
     public void simpleTest(int number, boolean expectedResult) {
         PrimalNumberChecker cheker = new PrimalNumberChecker();
@@ -31,6 +30,14 @@ public class SimpleTest {
         PrimalNumberChecker cheker = new PrimalNumberChecker();
         boolean result = cheker.isNumberPrimal(23);
         Assert.assertEquals(result, true);
+        //System.out.println(23 + " " + true + " " + result);
+    }
+
+    @Test (groups = "sanity")
+    public void twentyOneTest() {
+        PrimalNumberChecker cheker = new PrimalNumberChecker();
+        boolean result = cheker.isNumberPrimal(21);
+        Assert.assertEquals(result, false);
         //System.out.println(23 + " " + true + " " + result);
     }
 }
