@@ -40,4 +40,12 @@ public class SimpleTest {
         Assert.assertEquals(result, false);
         //System.out.println(23 + " " + true + " " + result);
     }
+    
+    @Test (groups = "sanity")
+    public void twentyTwoTest() {
+        PrimalNumberChecker cheker = new PrimalNumberChecker();
+        boolean result = cheker.isNumberPrimal(22);
+        Assert.assertEquals(result, false);
+        //System.out.println(23 + " " + true + " " + result);
+    }
 }
